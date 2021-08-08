@@ -1,0 +1,10 @@
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+   <param command="$(find xacro)/xacro $(find pnp_bot_description)/urdf/pnp_bot.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model pnp_bot" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="pnp_bot" value="$(find pnp_bot_description)/worlds/pnp_bot.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+</launch>

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<robot name="pnp_bot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<material name="rubber">
+  <color rgba="0.149 0.149 0.149 1.000"/>
+</material>
+
+<material name="steel">
+  <color rgba="0.4431 0.4745 0.4941 1.000"/>
+</material>
+
+<material name="wood">
+  <color rgba="0.5216 0.3686 0.258 1.000"/>
+</material>
+
+</robot>

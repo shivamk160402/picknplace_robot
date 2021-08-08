@@ -1,0 +1,57 @@
+box positions:
+box 1:
+x = 92.199 mm
+y = 94.969 mm
+z = 10mm
+
+box2:
+x = 1624.89 mm
+y = 120.957 mm
+z = 10mm
+
+box3:
+x = 1844.172 mm
+y = 2586.201 mm
+z = 10mm
+
+box4:
+x = 1860.20 mm
+y = 3051.65 mm
+z = 10mm
+
+box5:
+x = 731.787 mm
+y = 3882.67 mm
+z = 315.314 mm
+
+can positions:
+can1:
+x = 743.30 mm
+y = 1318.517 mm
+z = 10.00 mm
+
+can2:
+x = 1855.583 mm
+y = 2011.777 mm
+z = 10.00mm
+
+can3:
+x = 89.224 mm
+y = 3844.073 mm
+z = 10.00mm
+
+can4:
+x = 1825.899 mm
+y = 3484.114 mm
+z = 10.00mm
+
+PID values for Rev27 and Rev29
+Rev27:
+P: 5.0
+I: 0.00005
+D: 4.0
+
+Rev29:
+P: 0.8
+I: 0.0001
+D: 2.5

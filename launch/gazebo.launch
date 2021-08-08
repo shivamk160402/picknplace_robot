@@ -1,0 +1,27 @@
+<launch>
+  <param command="$(find xacro)/xacro $(find pnp_bot_description)/urdf/pnp_bot.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model pnp_bot" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find pnp_bot_description)/worlds/pnp_bot.world"/> 
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+   
+  <rosparam file="$(find pnp_bot_description)/launch/controller.yaml" command="load"/>
+  <node args="Rev22_position_controller
+              Rev23_position_controller 
+              Rev24_position_controller 
+              Rev25_position_controller 
+              Rev27_position_controller 
+              Rev29_position_controller 
+              joint_state_controller " 
+              name="controller_spawner" ns="pnp_bot" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+  <node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  <remap from="/joint_states" to="/pnp_bot/joint_states"/>
+  </node>
+
+  <!-- <node name="test" pkg="pnp_bot_description" respawn="false" type="test.py"/> -->
+</launch>

@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://pnp_game_field</uri>
+      <name>game_field</name>
+      <pose>1 1 0 0 0 0</pose>
+    </include>
+
+    <!-- boxes -->
+    <include>
+      <uri>model://box</uri>
+      <name>box1</name>
+      <pose>1.010 1.010 0.01 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://box</uri>
+      <name>box2</name>
+      <pose>2.630 1.130 0.01 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://box</uri>
+      <name>box3</name>
+      <pose>2.845 3.586 0.01 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://box</uri>
+      <name>box4</name>
+      <pose>2.860 4.050 0.01 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://box</uri>
+      <name>box5</name>
+      <pose>1.730 4.880 0.315 0 0 0</pose>
+    </include>
+
+    <!-- cans -->
+    <include>
+      <uri>model://coke_can</uri>
+      <name>can1</name>
+      <pose>1.7450 2.320 0.01 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://coke_can</uri>
+      <name>can2</name>
+      <pose>2.860 3.0100 0.01 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://coke_can</uri>
+      <name>can3</name>
+      <pose>1.090 4.850 0.01 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://coke_can</uri>
+      <name>can4</name>
+      <pose>2.830 4.500 0.01 0 0 0</pose>
+    </include>
+  </world>
+</sdf>

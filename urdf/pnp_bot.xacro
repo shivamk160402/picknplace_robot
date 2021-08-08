@@ -1,0 +1,415 @@
+<?xml version="1.0" ?>
+<robot name="pnp_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find pnp_bot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find pnp_bot_description)/urdf/pnp_bot.trans" />
+<xacro:include filename="$(find pnp_bot_description)/urdf/pnp_bot.gazebo" />
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.11848301617323981 0.002730013867984873 0.05793995594569746"/>
+    <mass value="1.5699999999999996"/>
+    <inertia ixx="0.005237" ixy="-0.0" ixz="0.0" iyy="0.005237" iyz="0.0" izz="0.010467"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="wood"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shaft_clamp_2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.01000001194044622 1.3867984677284895e-08 -0.010719946113695242"/>
+    <mass value="0.028906595141109794"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.018483 -0.09273 -0.05544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_clamp_2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.018483 -0.09273 -0.05544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_clamp_2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shaft_clamp_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.009999979593966118 1.3867984233195685e-08 -0.01071994611369547"/>
+    <mass value="0.028906595141109794"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="-0.0" iyy="2e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.218483 -0.09273 -0.05544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_clamp_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.218483 -0.09273 -0.05544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_clamp_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shaft_clamp_3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.009999988059557069 1.3867984843818348e-08 -0.010719946113695845"/>
+    <mass value="0.028906595141109794"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.218483 0.08727 -0.05544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_clamp_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.218483 0.08727 -0.05544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_clamp_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="_shaft_clamp_1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010000011940445499 1.3867985079740741e-08 -0.010719946113695727"/>
+    <mass value="0.028906595141109794"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.018483 0.08727 -0.05544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_clamp_1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.018483 0.08727 -0.05544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_clamp_1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shaft_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-9.114612523064558e-09 -0.13999998613201523 -4.876005163523267e-08"/>
+    <mass value="0.1726305163147591"/>
+    <inertia ixx="0.001129" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="0.001129"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.028483 -0.14273 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.028483 -0.14273 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shaft_2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.323186720776249e-08 -0.1399999861320157 -4.876005179482723e-08"/>
+    <mass value="0.1726305163147591"/>
+    <inertia ixx="0.001129" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="0.001129"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.208483 -0.14273 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.208483 -0.14273 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/shaft_2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-9.114604560683803e-09 -0.01999998613201498 -4.876005131604355e-08"/>
+    <mass value="1.5330961087112107"/>
+    <inertia ixx="0.000815" ixy="-0.0" ixz="0.0" iyy="0.001231" iyz="0.0" izz="0.000815"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.028483 -0.14773 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/wheel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="rubber"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.028483 -0.14773 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/wheel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.3231858742311928e-08 -0.019999986132015618 -4.8760051607477095e-08"/>
+    <mass value="1.5330961087112107"/>
+    <inertia ixx="0.000815" ixy="-0.0" ixz="0.0" iyy="0.001231" iyz="0.0" izz="0.000815"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.208483 -0.14773 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/wheel_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="rubber"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.208483 -0.14773 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/wheel_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-9.1146203293202e-09 0.020000013867984875 -4.8760051891971745e-08"/>
+    <mass value="1.5330961087112107"/>
+    <inertia ixx="0.000815" ixy="-0.0" ixz="0.0" iyy="0.001231" iyz="0.0" izz="0.000815"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.028483 0.14227 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="rubber"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.028483 0.14227 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.3231875034834815e-08 0.02000001386798439 -4.87600520585052e-08"/>
+    <mass value="1.5330961087112107"/>
+    <inertia ixx="0.000815" ixy="0.0" ixz="0.0" iyy="0.001231" iyz="0.0" izz="0.000815"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.208483 0.14227 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/wheel_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="rubber"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.208483 0.14227 -0.04044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/wheel_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.6180410775112897e-08 0.000804350602864639 0.009717866357837661"/>
+    <mass value="0.13797301015309038"/>
+    <inertia ixx="1.6e-05" ixy="0.0" ixz="0.0" iyy="1.4e-05" iyz="-0.0" izz="2.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.098483 0.01727 -0.06044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/motor_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.098483 0.01727 -0.06044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/motor_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.06788940014113293 0.002884517721474718 -4.390529109721264e-08"/>
+    <mass value="0.11076315215619528"/>
+    <inertia ixx="2.1e-05" ixy="-4.3e-05" ixz="-0.0" iyy="0.000175" iyz="0.0" izz="0.000194"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.098483 -0.01273 -0.07044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/arm__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.098483 -0.01273 -0.07044"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/arm__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.6929162989856583e-08 -0.009717896544152166 0.014195619359829312"/>
+    <mass value="0.13797301015309038"/>
+    <inertia ixx="1.6e-05" ixy="0.0" ixz="0.0" iyy="2.2e-05" iyz="-0.0" izz="1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.006517 -0.00773 -0.07544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/motor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.006517 -0.00773 -0.07544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/motor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.015062531918098901 1.371897654376189e-08 0.0024999560947090854"/>
+    <mass value="0.00779303520976114"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.006517 0.00227 -0.06544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/gripper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.006517 0.00227 -0.06544"/>
+    <geometry>
+      <mesh filename="package://pnp_bot_description/meshes/gripper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid16" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.018483 0.09273 0.05544"/>
+  <parent link="base_link"/>
+  <child link="shaft_clamp_2__1"/>
+</joint>
+
+<joint name="Rigid17" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.218483 0.09273 0.05544"/>
+  <parent link="base_link"/>
+  <child link="shaft_clamp_4_1"/>
+</joint>
+
+<joint name="Rigid18" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.218483 -0.08727 0.05544"/>
+  <parent link="base_link"/>
+  <child link="shaft_clamp_3_1"/>
+</joint>
+
+<joint name="Rigid19" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.018483 -0.08727 0.05544"/>
+  <parent link="base_link"/>
+  <child link="_shaft_clamp_1__1"/>
+</joint>
+
+<joint name="Rigid20" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.01 0.05 -0.015"/>
+  <parent link="shaft_clamp_2__1"/>
+  <child link="shaft_1_1"/>
+</joint>
+
+<joint name="Rigid21" type="fixed">
+  <origin rpy="0 0 0" xyz="0.01 0.05 -0.015"/>
+  <parent link="shaft_clamp_4_1"/>
+  <child link="shaft_2__1"/>
+</joint>
+
+<joint name="Rev22" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.005 0.0"/>
+  <parent link="shaft_1_1"/>
+  <child link="wheel_1_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev23" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.005 0.0"/>
+  <parent link="shaft_2__1"/>
+  <child link="wheel_3_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev24" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.285 0.0"/>
+  <parent link="shaft_1_1"/>
+  <child link="wheel_2_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rev25" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.285 0.0"/>
+  <parent link="shaft_2__1"/>
+  <child link="wheel_4_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid26" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.098483 -0.01727 0.06044"/>
+  <parent link="base_link"/>
+  <child link="motor_1_1"/>
+</joint>
+
+<joint name="Rev27" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 0.03 0.01"/>
+  <parent link="motor_1_1"/>
+  <child link="arm__1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <limit effort="100" lower="-3.141593" upper="1.0" velocity="100"/>
+</joint>
+
+<joint name="Rigid28" type="fixed">
+  <origin rpy="0 0 0" xyz="0.105 -0.005 0.005"/>
+  <parent link="arm__1"/>
+  <child link="motor_2_1"/>
+</joint>
+
+<joint name="Rev29" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 -0.01 -0.01"/>
+  <parent link="motor_2_1"/>
+  <child link="gripper_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+  <limit effort="100" lower="-1.0" upper="3.141593" velocity="100"/>
+</joint>
+
+</robot>

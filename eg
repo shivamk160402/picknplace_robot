@@ -1,0 +1,72 @@
+model.comfig file - location -models
+<model>
+  <name>books</name>
+  <version>1.0</version>
+  <sdf version="1.5">books.sdf</sdf>
+  <author>
+    <name>Ricardo Tellez</name>
+    <email>rtellez@theconstructsim.com</email>
+  </author>
+
+  <description>
+    Several books downloaded from 3Dwarehouse
+    https://3dwarehouse.sketchup.com/model/354de466d499cc88aee74b2ba0420dda/Rein-Books-1
+  </description>
+</model>
+
+sdf file  location models
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="books">
+    <static>true</static>
+    <link name="chair_link">
+        <collision name="books_collision">  
+         <geometry>
+            <mesh>
+                <uri>model://books/meshes/model.dae</uri>
+            </mesh>
+        </geometry>
+      </collision>
+      
+      <visual name="books_mesh">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+            <mesh>
+                <uri>model://books/meshes/model.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
+
+world file   location world
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+    <uri>model://model_name</uri>
+</include>
+    
+  </world>
+</sdf>
+
+launch file location launch
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find cozmo_gazebo)/worlds/test.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+</launch>
